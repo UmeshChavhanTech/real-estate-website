@@ -7,49 +7,29 @@ const Hero = () => {
       id="home"
       className="hero flex items-center justify-center min-h-[90vh] bg-cover bg-center relative"
       style={{
-        backgroundImage: "url('/images/hero-bg.jpg')",
+        backgroundImage:
+          "url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2053&q=80')",
       }}
     >
-      <div className="absolute inset-0 bg-black/50"></div>
+      {/* ✅ Soft light overlay for clear background */}
+      <div className="absolute inset-0 bg-white/60"></div>
 
-      <div className="container relative z-10 text-center px-6 md:px-12">
+      <div className="container relative z-10 text-center px-6 md:px-20 text-black">
         <div className="hero-content scroll-reveal">
-          <h1 className="text-4xl md:text-6xl font-bold text-white leading-tight mb-4 animate-glow">
-            Discover Your{" "}
-            <span className="text-[#d4af37]">Dream Property</span>
-          </h1>
-
-          <p
-            className="text-lg md:text-xl text-gray-200 mb-8 animate-fade-up"
-            style={{ animationDelay: "0.3s" }}
-          >
-            Experience{" "}
-            <span className="text-[#d4af37]">
-              premium real estate services
-            </span>{" "}
-            with futuristic solutions and unparalleled expertise. <br />
-            Where <span className="italic">luxury meets innovation</span> in
-            property investment.
-          </p>
-
+          
           <div
-            className="flex flex-col md:flex-row gap-4 justify-center animate-fade-up"
-            style={{ animationDelay: "0.6s" }}
-          >
-            <Link
-              to="/properties"
-              className="btn-primary premium-hover animate-float px-8 py-3 bg-[#d4af37] text-white rounded-full text-lg font-semibold hover:bg-[#b89630] transition-all duration-300 shadow-lg"
-            >
-              🏠 Explore Premium Properties
-            </Link>
+  className="flex flex-col md:flex-row gap-6 justify-center items-center mt-8"
+  style={{ animationDelay: "0.6s" }}
+>
+  <Link
+    to="/properties"
+    className="btn-primary px-10 py-4 bg-[#d4af37] text-white rounded-full text-lg font-bold hover:bg-[#b89630] transition-all duration-300 shadow-2xl hover:shadow-xl transform hover:scale-105 border-2 border-transparent hover:border-[#a08528] min-w-[280px] text-center"
+  >
+    🏠 Explore Premium Properties
+  </Link>
 
-            <Link
-              to="/consultation"
-              className="btn-secondary premium-hover px-8 py-3 border border-[#d4af37] text-[#d4af37] rounded-full text-lg font-semibold hover:bg-[#d4af37] hover:text-white transition-all duration-300"
-            >
-              💼 Schedule Consultation
-            </Link>
-          </div>
+  
+</div>
         </div>
       </div>
     </section>

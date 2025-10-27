@@ -340,24 +340,33 @@ a.btn-primary, a.btn-secondary {
   position: relative;
 }
 
-.logo {
+/* .logo {
   font-size: 32px;
   font-weight: bold;
   color: var(--gold);
   text-decoration: none;
   animation: glow 2s ease-in-out infinite;
   z-index: 1001;
+} */
+
+/* Alternative: Centered Navigation */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  position: relative;
 }
 
-/* Desktop Navigation */
 .nav-links {
   display: flex;
   list-style: none;
-  gap: 30px;
-  margin: 0 90px;
+  gap: 55px;
+  margin: 0;
   padding: 0;
-  justify-content: flex-start;
-  align-items: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .nav-links a {
@@ -366,14 +375,15 @@ a.btn-primary, a.btn-secondary {
   font-weight: 600;
   transition: all 0.3s ease;
   position: relative;
-  padding: 5px 0;
-  font-size: 20px;
+  padding: 12px 0;
+  font-size: 18px;
+  white-space: nowrap;
 }
 
 .nav-links a::after {
   content: '';
   position: absolute;
-  bottom: 0;
+  bottom: 8px;
   left: 0;
   width: 0;
   height: 2px;
@@ -389,17 +399,18 @@ a.btn-primary, a.btn-secondary {
   color: var(--gold);
 }
 
-.nav-links a.active {
+.logo {
+  font-size: 22px;
+  font-weight: bold;
   color: var(--gold);
+  text-decoration: none;
+  animation: glow 2s ease-in-out infinite;
+  z-index: 4;
+      
 }
-
-.nav-links a.active::after {
-  width: 100%;
-}
-
 /* Hero Section */
 .hero {
-  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+  background: 
               url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2053&q=80');
   background-size: cover;
   background-position: center;
